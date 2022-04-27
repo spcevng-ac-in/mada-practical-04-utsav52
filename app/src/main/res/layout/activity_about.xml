@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity"
+    android:background="#E9EFF7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/titlecard"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="10dp"
+            android:elevation="25dp"
+            app:cardBackgroundColor="#E9EFF7"
+            android:outlineAmbientShadowColor="@color/teal_200"
+            android:outlineSpotShadowColor="@color/teal_200"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="25dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/teslaimg"
+                    android:contentDescription="Tesla Image"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/desccard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#E9EFF7"
+            app:cardCornerRadius="20dp"
+            android:elevation="25dp"
+            android:outlineSpotShadowColor="@color/purple_200"
+            android:outlineAmbientShadowColor="@color/purple_200"
+            app:cardElevation="25dp"
+            android:layout_below="@id/titlecard">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tesla"
+                        android:fontFamily="cursive"
+                        android:gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <Button
+                        android:id="@+id/backbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/desc"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_back_ios_24"
+                        android:text="back" />
+                    <Button
+                         android:id="@+id/sharebutton"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@id/desc"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginStart="10dp"
+                         android:layout_marginTop="10dp"
+                         android:backgroundTint="@color/teal_200"
+                         android:layout_marginEnd="10dp"
+                         android:layout_marginBottom="10dp"
+                         android:drawableEnd="@drawable/ic_baseline_share_24"
+                         android:text="share" />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
